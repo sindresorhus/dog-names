@@ -1,0 +1,55 @@
+{
+  "name": "dog-names",
+  "version": "0.0.0",
+  "description": "Get popular dog names",
+  "license": "MIT",
+  "repository": "sindresorhus/dog-names",
+  "bin": {
+    "dog-names": "cli.js"
+  },
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "files": [
+    "index.js",
+    "cli.js",
+    "female-dog-names.json",
+    "male-dog-names.json"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    "bin",
+    "superb",
+    "awesome",
+    "word",
+    "words",
+    "list",
+    "array",
+    "random",
+    "rand",
+    "animal",
+    "dog",
+    "dogs",
+    "puppy",
+    "name",
+    "names",
+    "female",
+    "male"
+  ],
+  "dependencies": {
+    "meow": "^2.1.0",
+    "unique-random": "^1.0.0"
+  },
+  "devDependencies": {
+    "ava": "0.0.4"
+  }
+}
