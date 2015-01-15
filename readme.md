@@ -6,6 +6,8 @@
 
 The name lists are just JSON files and can be used wherever.
 
+*Not accepting PRs for additional names.*
+
 
 ## Install
 
