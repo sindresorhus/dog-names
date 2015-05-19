@@ -4,14 +4,12 @@
   "description": "Get popular dog names",
   "license": "MIT",
   "repository": "sindresorhus/dog-names",
-  "bin": {
-    "dog-names": "cli.js"
-  },
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com"
   },
+  "bin": "cli.js",
   "engines": {
     "node": ">=0.10.0"
   },
@@ -27,7 +25,6 @@
   "keywords": [
     "cli-app",
     "cli",
-    "bin",
     "superb",
     "awesome",
     "word",
