@@ -19,10 +19,10 @@ $ npm install --save dog-names
 ## Usage
 
 ```js
-var dogNames = require('dog-names');
+const dogNames = require('dog-names');
 
 dogNames.femaleRandom();
-//=> Lucy
+//=> 'Lucy'
 ```
 
 
