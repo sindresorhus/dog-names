@@ -1,16 +1,14 @@
-'use strict';
-var test = require('ava');
-var dogNames = require('./');
+import test from 'ava';
+import m from './';
 
-test(function (t) {
-	t.assert(dogNames.female.length > 0);
-	t.assert(dogNames.male.length > 0);
-	t.assert(dogNames.all.length > 0);
-	t.assert(dogNames.femaleRandom());
-	t.assert(dogNames.maleRandom());
-	t.assert(dogNames.allRandom());
-	t.assert(dogNames.allRandom() !== dogNames.allRandom());
-	t.assert(dogNames.all[0] === 'Bella');
-	t.assert(dogNames.all[1] === 'Max');
-	t.end();
+test(t => {
+	t.true(m.female.length > 0);
+	t.true(m.male.length > 0);
+	t.true(m.all.length > 0);
+	t.ok(m.femaleRandom());
+	t.ok(m.maleRandom());
+	t.ok(m.allRandom());
+	t.not(m.allRandom(), m.allRandom());
+	t.is(m.all[0], 'Bella');
+	t.is(m.all[1], 'Max');
 });
