@@ -92,6 +92,7 @@ $ dog-names --help
 ## Related
 
 - [cat-names](https://github.com/sindresorhus/cat-names) - Get popular cat names
+- [pokemon](https://github.com/sindresorhus/pokemon) - Get Pokémon names
 - [superb](https://github.com/sindresorhus/superb) - Get superb like words
 - [superheroes](https://github.com/sindresorhus/superheroes) - Get superhero names
 - [supervillains](https://github.com/sindresorhus/supervillains) - Get supervillain names
