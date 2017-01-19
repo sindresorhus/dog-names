@@ -6,7 +6,9 @@ var maleDogNames = require('./male-dog-names.json');
 var allDogNames = [];
 
 femaleDogNames.forEach(function (el, i) {
-	allDogNames.push(el, maleDogNames[i]);
+    if((maleDogNames[i] !== undefined) && (maleDogNames[i] !== 'undefined')){
+       allDogNames.push(el, maleDogNames[i]);
+    }
 });
 
 exports.female = femaleDogNames;
