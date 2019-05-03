@@ -12,7 +12,7 @@ The name lists are just JSON files and can be used wherever.
 ## Install
 
 ```
-$ npm install --save dog-names
+$ npm install dog-names
 ```
 
 
@@ -30,37 +30,37 @@ dogNames.femaleRandom();
 
 ### .female
 
-Type: `array`
+Type: `string[]`
 
 Top 100 female dog names sorted by popularity.
 
 ### .male
 
-Type: `array`
+Type: `string[]`
 
 Top 100 male dog names sorted by popularity.
 
 ### .all
 
-Type: `array`
+Type: `string[]`
 
 Top 200 dog names sorted by popularity.
 
 ### .femaleRandom()
 
-Type: `function`
+Type: `Function`
 
 Random female dog name.
 
 ### .maleRandom()
 
-Type: `function`
+Type: `Function`
 
 Random male dog name.
 
 ### .allRandom()
 
-Type: `function`
+Type: `Function`
 
 Random dog name.
 
@@ -74,18 +74,22 @@ $ npm install --global dog-names
 ```
 $ dog-names --help
 
+  Get popular dog names
+
+  Usage
+    $ dog-names
+
+  Options
+    --all   Get all the names instead of a random name
+    --type  Type of name  [Default: all]  [Values: female, male, all]
+
   Examples
     $ dog-names
     Lucy
-
     $ dog-names --all --type male
     Max
     Buddy
-    ...
-
-  Options
-    --all   Get all names instead of a random name
-    --type  Type of name: female|male|all  Default: all
+    …
 ```
 
 

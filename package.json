@@ -1,52 +1,60 @@
 {
-  "name": "dog-names",
-  "version": "1.0.2",
-  "description": "Get popular dog names",
-  "license": "MIT",
-  "repository": "sindresorhus/dog-names",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "bin": "cli.js",
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "ava"
-  },
-  "files": [
-    "index.js",
-    "cli.js",
-    "female-dog-names.json",
-    "male-dog-names.json"
-  ],
-  "keywords": [
-    "cli-app",
-    "cli",
-    "superb",
-    "awesome",
-    "word",
-    "words",
-    "list",
-    "array",
-    "random",
-    "rand",
-    "animal",
-    "dog",
-    "dogs",
-    "puppy",
-    "name",
-    "names",
-    "female",
-    "male"
-  ],
-  "dependencies": {
-    "meow": "^3.3.0",
-    "unique-random-array": "^1.0.0"
-  },
-  "devDependencies": {
-    "ava": "*"
-  }
+	"name": "dog-names",
+	"version": "1.0.2",
+	"description": "Get popular dog names",
+	"license": "MIT",
+	"repository": "sindresorhus/dog-names",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"bin": "cli.js",
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"test": "xo && ava && tsd"
+	},
+	"files": [
+		"index.js",
+		"index.d.ts",
+		"cli.js",
+		"female-dog-names.json",
+		"male-dog-names.json"
+	],
+	"keywords": [
+		"cli-app",
+		"cli",
+		"superb",
+		"awesome",
+		"word",
+		"words",
+		"list",
+		"array",
+		"random",
+		"rand",
+		"animal",
+		"dog",
+		"dogs",
+		"puppy",
+		"name",
+		"names",
+		"female",
+		"male"
+	],
+	"dependencies": {
+		"meow": "^5.0.0",
+		"unique-random-array": "^2.0.0"
+	},
+	"devDependencies": {
+		"ava": "^1.4.1",
+		"tsd": "^0.7.2",
+		"xo": "^0.24.0"
+	},
+	"tsd": {
+		"compilerOptions": {
+			"resolveJsonModule": true
+		}
+	}
 }

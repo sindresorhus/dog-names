@@ -1,13 +1,15 @@
 'use strict';
-var uniqueRandomArray = require('unique-random-array');
-var femaleDogNames = require('./female-dog-names.json');
-var maleDogNames = require('./male-dog-names.json');
+const uniqueRandomArray = require('unique-random-array');
+const femaleDogNames = require('./female-dog-names.json');
+const maleDogNames = require('./male-dog-names.json');
 
-var allDogNames = [];
-
-femaleDogNames.forEach(function (el, i) {
-	allDogNames.push(el, maleDogNames[i]);
-});
+const allDogNames = femaleDogNames.reduce(
+	(allDogNames, femaleDogName, index) => {
+		allDogNames.push(femaleDogName, maleDogNames[index]);
+		return allDogNames;
+	},
+	[]
+);
 
 exports.female = femaleDogNames;
 exports.male = maleDogNames;
