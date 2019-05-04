@@ -1,14 +1,14 @@
 import test from 'ava';
-import m from './';
+import dogNames from '.';
 
-test(t => {
-	t.true(m.female.length > 0);
-	t.true(m.male.length > 0);
-	t.true(m.all.length > 0);
-	t.truthy(m.femaleRandom());
-	t.truthy(m.maleRandom());
-	t.truthy(m.allRandom());
-	t.not(m.allRandom(), m.allRandom());
-	t.is(m.all[0], 'Bella');
-	t.is(m.all[1], 'Max');
+test('main', t => {
+	t.true(dogNames.female.length > 0);
+	t.true(dogNames.male.length > 0);
+	t.true(dogNames.all.length > 0);
+	t.truthy(dogNames.femaleRandom());
+	t.truthy(dogNames.maleRandom());
+	t.truthy(dogNames.allRandom());
+	t.not(dogNames.allRandom(), dogNames.allRandom());
+	t.is(dogNames.all[0], 'Bella');
+	t.is(dogNames.all[1], 'Max');
 });
