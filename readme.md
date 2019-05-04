@@ -4,9 +4,9 @@
 
 ![](kira.jpg)
 
-The name lists are just JSON files and can be used wherever.
+The name lists are just JSON files and can be used anywhere.
 
-*Not accepting PRs for additional names.*
+*I'm not accepting PRs for additional names.*
 
 
 ## Install
