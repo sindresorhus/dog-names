@@ -1,15 +1,10 @@
 'use strict';
 const uniqueRandomArray = require('unique-random-array');
+const {flatZip} = require('flat-zip');
 const femaleDogNames = require('./female-dog-names.json');
 const maleDogNames = require('./male-dog-names.json');
 
-const allDogNames = femaleDogNames.reduce(
-	(allDogNames, femaleDogName, index) => {
-		allDogNames.push(femaleDogName, maleDogNames[index]);
-		return allDogNames;
-	},
-	[]
-);
+const allDogNames = flatZip([femaleDogNames, maleDogNames]);
 
 exports.female = femaleDogNames;
 exports.male = maleDogNames;
