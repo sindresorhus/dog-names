@@ -43,6 +43,7 @@
 		"male"
 	],
 	"dependencies": {
+		"flat-zip": "^1.0.1",
 		"meow": "^5.0.0",
 		"unique-random-array": "^2.0.0"
 	},
