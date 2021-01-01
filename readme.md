@@ -1,4 +1,4 @@
-# dog-names [![Build Status](https://travis-ci.org/sindresorhus/dog-names.svg?branch=master)](https://travis-ci.org/sindresorhus/dog-names)
+# dog-names
 
 > Get popular dog names
 
