@@ -1,15 +1,10 @@
-'use strict';
-const uniqueRandomArray = require('unique-random-array');
-const {flatZip} = require('flat-zip');
-const femaleDogNames = require('./female-dog-names.json');
-const maleDogNames = require('./male-dog-names.json');
+import uniqueRandomArray from 'unique-random-array';
+import {flatZip} from 'flat-zip';
+import femaleDogNames from './female-dog-names.json' with {type: 'json'};
+import maleDogNames from './male-dog-names.json' with {type: 'json'};
 
-const allDogNames = flatZip([femaleDogNames, maleDogNames]);
-
-exports.female = femaleDogNames;
-exports.male = maleDogNames;
-exports.all = allDogNames;
-
-exports.femaleRandom = uniqueRandomArray(femaleDogNames);
-exports.maleRandom = uniqueRandomArray(maleDogNames);
-exports.allRandom = uniqueRandomArray(allDogNames);
+export const dogNames = flatZip([femaleDogNames, maleDogNames]);
+export {femaleDogNames, maleDogNames};
+export const randomDogName = uniqueRandomArray(dogNames);
+export const randomFemaleDogName = uniqueRandomArray(femaleDogNames);
+export const randomMaleDogName = uniqueRandomArray(maleDogNames);

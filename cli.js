@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-'use strict';
-const meow = require('meow');
-const dogNames = require('.');
+import meow from 'meow';
+import dogNames from './index.js';
 
 const cli = meow(`
 	Usage:
@@ -19,6 +18,7 @@ const cli = meow(`
 	  Buddy
 	  …
 `, {
+	importMeta: import.meta,
 	flags: {
 		all: {
 			type: 'boolean',

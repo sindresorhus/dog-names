@@ -8,67 +8,63 @@ The name lists are just JSON files and can be used anywhere.
 
 *I'm not accepting PRs for additional names.*
 
-
 ## Install
 
+```sh
+npm install dog-names
 ```
-$ npm install dog-names
-```
-
 
 ## Usage
 
 ```js
-const dogNames = require('dog-names');
+import {randomFemaleDogName} from 'dog-names';
 
-dogNames.femaleRandom();
+randomFemaleDogName();
 //=> 'Lucy'
 ```
 
-
 ## API
 
-### .female
-
-Type: `string[]`
-
-Top 100 female dog names sorted by popularity.
-
-### .male
-
-Type: `string[]`
-
-Top 100 male dog names sorted by popularity.
-
-### .all
+### dogNames
 
 Type: `string[]`
 
 Top 200 dog names sorted by popularity.
 
-### .femaleRandom()
+### femaleDogNames
+
+Type: `string[]`
+
+Top 100 female dog names sorted by popularity.
+
+### maleDogNames
+
+Type: `string[]`
+
+Top 100 male dog names sorted by popularity.
+
+### randomDogName()
 
 Type: `Function`
 
-Random female dog name.
+Get a random dog name.
 
-### .maleRandom()
-
-Type: `Function`
-
-Random male dog name.
-
-### .allRandom()
+### randomFemaleDogName()
 
 Type: `Function`
 
-Random dog name.
+Get a random female dog name.
 
+### randomMaleDogName()
+
+Type: `Function`
+
+Get a random male dog name.
 
 ## CLI
 
-```
-$ npm install --global dog-names
+```sh
+npm install --global dog-names
 ```
 
 ```
@@ -92,7 +88,6 @@ $ dog-names --help
     …
 ```
 
-
 ## Related
 
 - [cat-names](https://github.com/sindresorhus/cat-names) - Get popular cat names
@@ -101,8 +96,3 @@ $ dog-names --help
 - [superheroes](https://github.com/sindresorhus/superheroes) - Get superhero names
 - [supervillains](https://github.com/sindresorhus/supervillains) - Get supervillain names
 - [yes-no-words](https://github.com/sindresorhus/yes-no-words) - Get yes/no like words
-
-
-## License
-
-MIT © [Sindre Sorhus](http://sindresorhus.com)

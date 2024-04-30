@@ -1,84 +1,78 @@
-import femaleDogNames = require('./female-dog-names.json');
-import maleDogNames = require('./male-dog-names.json');
+/**
+Top 200 dog names sorted by popularity.
 
-declare const dogNames: {
-	/**
-	Top 100 female dog names sorted by popularity.
+@example
+```
+import {dogNames} from 'dog-names';
 
-	@example
-	```
-	import dogNames = require('dog-names');
+dogNames;
+//=> ['Bella', 'Max', …]
+```
+*/
+export const dogNames: readonly string[];
 
-	dogNames.female;
-	//=> ['Bella', 'Lucy', …]
-	```
-	*/
-	readonly female: Readonly<typeof femaleDogNames>;
+/**
+Top 100 female dog names sorted by popularity.
 
-	/**
-	Top 100 male dog names sorted by popularity.
+@example
+```
+import {femaleDogNames} from 'dog-names';
 
-	@example
-	```
-	import dogNames = require('dog-names');
+femaleDogNames;
+//=> ['Bella', 'Lucy', …]
+```
+*/
+export const femaleDogNames: readonly string[];
 
-	dogNames.male;
-	//=> ['Max', 'Buddy', …]
-	```
-	*/
-	readonly male: Readonly<typeof maleDogNames>;
+/**
+Top 100 male dog names sorted by popularity.
 
-	/**
-	Top 200 dog names sorted by popularity.
+@example
+```
+import {maleDogNames} from 'dog-names';
 
-	@example
-	```
-	import dogNames = require('dog-names');
+maleDogNames;
+//=> ['Max', 'Buddy', …]
+```
+*/
+export const maleDogNames: readonly string[];
 
-	dogNames.all;
-	//=> ['Bella', 'Max', …]
-	```
-	*/
-	readonly all: Readonly<typeof femaleDogNames> & Readonly<typeof maleDogNames>;
+/**
+Get a random dog name.
 
-	/**
-	Random female dog name.
+@example
+```
+import {randomDogName} from 'dog-names';
 
-	@example
-	```
-	import dogNames = require('dog-names');
+randomDogName();
+//=> 'Coco'
+```
+*/
+export function randomDogName(): string;
 
-	dogNames.femaleRandom();
-	//=> 'Lucy'
-	```
-	*/
-	femaleRandom(): string;
 
-	/**
-	Random male dog name.
+/**
+Get a random female dog name.
 
-	@example
-	```
-	import dogNames = require('dog-names');
+@example
+```
+import {randomFemaleDogName} from 'dog-names';
 
-	dogNames.maleRandom();
-	//=> 'Toby'
-	```
-	*/
-	maleRandom(): string;
+randomFemaleDogName();
+//=> 'Lucy'
+```
+*/
+export function randomFemaleDogName(): string;
 
-	/**
-	Random dog name.
+/**
+Get a random male dog name.
 
-	@example
-	```
-	import dogNames = require('dog-names');
+@example
+```
+import {randomMaleDogName} from 'dog-names';
 
-	dogNames.allRandom();
-	//=> 'Coco'
-	```
-	*/
-	allRandom(): string;
-};
-
-export = dogNames;
+randomMaleDogName();
+//=> 'Toby'
+```
+*/
+export function randomMaleDogName(): string;
