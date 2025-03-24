@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import meow from 'meow';
-import dogNames from './index.js';
+import * as dogNames from './index.js';
 
 const cli = meow(`
 	Usage:
@@ -37,4 +37,16 @@ if (!['female', 'male', 'all'].includes(type)) {
 	throw new Error(`Invalid type provided: '${type}'. Valid types are: 'female', 'male', 'all'.`);
 }
 
-console.log(all ? dogNames[type].join('\n') : dogNames[type + 'Random']());
+const listMap = {
+	female: 'femaleDogNames',
+	male: 'maleDogNames',
+	all: 'dogNames'
+};
+
+const randomMap = {
+	female: 'randomFemaleDogName',
+	male: 'randomMaleDogName',
+	all: 'randomDogName'
+};
+
+console.log(all ? dogNames[listMap[type]].join('\n') : dogNames[randomMap[type]]());
